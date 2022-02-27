@@ -1,0 +1,31 @@
+<!-- Kérj be egy legalább 30 karakterből álló szöveget! Kérj be egy szót! 
+a.) Ha szerepel az adott szó a szövegben, akkor felugró ablakban üzenj az alkalmazás 
+használójának! ("Szerepel az adott szó a keresett szövegben! ") -->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szerepel</title>
+</head>
+<body>
+<script>
+        function szerepel(){
+        const szoveg = document.getElementById("szoveg").value;
+        const szovegHossz = szoveg.length;
+        const szo = document.getElementById("szo").value;
+        const szoSzovegben = szoveg.includes(szo);
+            if (szovegHossz >= 30 && szoSzovegben){
+                alert('Szerepel az adott szó a keresett szövegben! ');
+            }
+        }
+    </script>
+    <label for="szoveg">Adj meg egy szöveget (legalább 30 karakter)!</label><br>
+    <input id="szoveg" type="text" placeholder="Ide írd a szöveget!"><br><br>
+    <label for="szo">Adj meg egy szót!</label><br>
+    <input id="szo" type="text" placeholder="Ide írd a szót!"><br><br>
+    <button onclick="szerepel()">Mutasd!</button>
+</body>
+</html>
