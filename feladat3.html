@@ -1,0 +1,23 @@
+<!-- Kérj be egy szöveget, alakítsd át csupa kisbetűsre! -->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisbetűs</title>
+</head>
+<body>
+    <script>
+        function atalakit(){
+        let kisbetusre = document.getElementById("kisbetusre").value;
+        let atalakitott = kisbetusre.toLowerCase()
+        document.getElementById("atalakitva").innerHTML = atalakitott
+        }
+    </script>
+    <label for="kisbetusre">Írj be egy szöveget!</label><br>
+    <input id="kisbetusre" type="text" placeholder="Ide írj" onblur="atalakit()">
+    <p id="atalakitva"></p>
+</body>
+</html>
