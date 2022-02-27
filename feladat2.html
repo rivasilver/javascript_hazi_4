@@ -10,6 +10,17 @@ a.) Fűzd őket egy változóba és alertben írasd ki! -->
     <title>Név</title>
 </head>
 <body>
-    
+    <script>
+        function teljesNevKiir(){
+            let csaladnev = document.getElementById("csaladnev").value;
+            let utonev = document.getElementById("utonev").value;
+            let teljesNev = csaladnev + " " + utonev;
+            alert(teljesNev);
+        }
+    </script>
+    <label for="csaladnev">Családnév: </label>
+    <input id="csaladnev" type="text" placeholder="Ide írj!"><br><br>
+    <label for="utonev">Utónév: </label>
+    <input id="utonev" type="text" placeholder="Ide írj!" onblur="teljesNevKiir()"><br><br>
 </body>
 </html>
