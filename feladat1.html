@@ -1,0 +1,24 @@
+<!-- Kérj be egy szöveget! Írasd ki a hosszát! -->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szöveg hossz</title>
+</head>
+<body>
+    <script>
+        function szamol(){
+        let szoveg = document.getElementById("szoveg").value;
+        let hossz = szoveg.length;
+        document.getElementById("hossz").innerHTML = "A szöveg hossza: " + hossz;
+        }
+    </script>
+    <label for="szoveg">Adj meg egy szöveget!</label><br>
+    <input id="szoveg" type="text" placeholder="Ide írj!"><br><br>
+    <button onclick="szamol()">Számolj!</button><br>
+    <p id="hossz"></p>
+</body>
+</html>
