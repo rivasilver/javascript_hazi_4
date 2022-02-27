@@ -1,0 +1,31 @@
+<!-- Kérj be egy szöveget, alakítsd át csupa kisbetűsre és nagybetűsre!
+a.) Nehezítés: Kínálj fel választási lehetőséget a felhasználónak, hogy melyik műveletet hajtsa 
+végre az alkalmazás! -->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisbetűs-nagybetűs</title>
+</head>
+<body>
+    <script>
+        function kisbetus(){
+            let szoveg = document.getElementById("szoveg").value;
+            document.getElementById("atalakitva").innerHTML = szoveg.toLowerCase();
+        }
+        function nagybetus(){
+            let szoveg = document.getElementById("szoveg").value;
+            document.getElementById("atalakitva").innerHTML = szoveg.toUpperCase();
+        }
+    </script>
+    <label for="szoveg">Írj be egy szöveget!</label><br>
+    <input id="szoveg" type="text" placeholder="Ide írj!"><br><br>
+    Kisbetűs legyen a szöveg, vagy nagybetűs?<br>
+    <button onclick="kisbetus()">Kisbetűs</button>
+    <button onclick="nagybetus()">Nagybetűs</button><br>
+    <p id="atalakitva"></p>
+</body>
+</html>
