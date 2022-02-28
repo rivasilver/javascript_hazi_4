@@ -9,6 +9,20 @@
     <title>Titkosítás</title>
 </head>
 <body>
-    
+    <script>
+        function titkosit(){
+            const szoveg = document.getElementById("szoveg").value;
+            let ascii = "";
+            for (i = 0; i < szoveg.length; i++){
+                const kod = szoveg.charCodeAt(i);
+                ascii += kod + " ";
+            }
+            document.getElementById("titkositott").innerHTML = "Titkosított szöveg:\n" + ascii
+        }
+    </script>
+    <label for="szoveg">Adj meg egy szöveget!</label><br>
+    <input id="szoveg" type="text" placeholder="Ide írd a szöveget!"><br><br>
+    <button onclick="titkosit()">Titkosítsd!</button><br>
+    <p id="titkositott"></p>
 </body>
 </html>
