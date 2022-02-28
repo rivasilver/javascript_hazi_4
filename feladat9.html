@@ -2,6 +2,8 @@
 tagolva!
 a.) Nehezítés: A kiíratást táblázatban valósítsd meg! -->
 
+<!-- Ezt a feladatot nem igazán értettem, nem hiszem, hogy jól oldottam meg. -->
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -11,6 +13,15 @@ a.) Nehezítés: A kiíratást táblázatban valósítsd meg! -->
     <title>Karakterek</title>
 </head>
 <body>
-    
+    <p id="karakterek"></p>
+    <script>
+        var karakterek = ""
+        for (i = 0; i < 256; i++){
+            let karakter = String.fromCharCode(i);
+            karakterek += karakter + ", ";
+        }
+        karakterek.trim(", ")
+        document.getElementById("karakterek").innerHTML = karakterek;
+    </script>
 </body>
 </html>
