@@ -1,0 +1,54 @@
+<!-- Válassz ki három feladatot a korábbiakból!
+a.) Helyezd el őket egy oldalon úgy, hogy megfelelően működjön!
+b.) Nehezítés: Az egész oldalt írd át reszponzívvá BootStrap segítségéve! -->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Három feladat</title>
+</head>
+<body>
+    <script>
+        function szamol(){
+        let szoveg = document.getElementById("szoveg1").value;
+        let hossz = szoveg.length;
+        document.getElementById("hossz").innerHTML = "A szöveg hossza: " + hossz + " karakter.";
+        }
+        function kisbetus(){
+            let szoveg = document.getElementById("szoveg4").value;
+            document.getElementById("atalakitva").innerHTML = szoveg.toLowerCase();
+        }
+        function nagybetus(){
+            let szoveg = document.getElementById("szoveg4").value;
+            document.getElementById("atalakitva").innerHTML = szoveg.toUpperCase();
+        }
+        function szamlalo(){
+            const szoveg = document.getElementById("szoveg7").value;
+            const szokoz = / /g;
+            const szokozIndex = szoveg.match(szokoz);
+            document.getElementById("osszesen").innerHTML = "Összes szóköz száma: " + szokozIndex.length;
+        }
+    </script>
+    
+    <label for="szoveg1">Adj meg egy szöveget!</label><br>
+    <input id="szoveg1" type="text" placeholder="Ide írj!"><br><br>
+    <button onclick="szamol()">Számolj!</button><br>
+    <p id="hossz"></p><br><br>
+
+    <label for="szoveg4">Írj be egy szöveget!</label><br>
+    <input id="szoveg4" type="text" placeholder="Ide írj!"><br><br>
+    Kisbetűs legyen a szöveg, vagy nagybetűs?<br>
+    <button onclick="kisbetus()">Kisbetűs</button>
+    <button onclick="nagybetus()">Nagybetűs</button><br>
+    <p id="atalakitva"></p><br><br>
+
+    <label for="szoveg7">Adj meg egy szöveget!</label><br>
+    <input id="szoveg7" type="text" placeholder="Ide írd a szöveget!"><br><br>
+    Hány szóköz van benne?<br>
+    <button onclick="szamlalo()">Számolj!</button>
+    <p id="osszesen"></p>
+</body>
+</html>
