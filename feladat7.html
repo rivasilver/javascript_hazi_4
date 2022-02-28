@@ -9,6 +9,18 @@
     <title>Szóközszámláló</title>
 </head>
 <body>
-    
+    <script>
+        function szamlalo(){
+            const szoveg = document.getElementById("szoveg").value;
+            const szokoz = / /g;
+            const szokozIndex = szoveg.match(szokoz);
+            document.getElementById("osszesen").innerHTML = "Összes szóköz száma: " + szokozIndex.length;
+        }
+    </script>
+    <label for="szoveg">Adj meg egy szöveget!</label><br>
+    <input id="szoveg" type="text" placeholder="Ide írd a szöveget!"><br><br>
+    Hány szóköz van benne?<br>
+    <button onclick="szamlalo()">Számolj!</button>
+    <p id="osszesen"></p>
 </body>
 </html>
